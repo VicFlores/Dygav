@@ -45,10 +45,7 @@ export const Login = () => {
 
       await setLoginCookies(data.access_token, data.refresh_token);
 
-      const userRole = await getOwnerInfo(
-        data.access_token,
-        data.refresh_token
-      );
+      const userRole = await getOwnerInfo();
 
       if (userRole?.role === 'OWNER') {
         router.push('/private/owners/dashboard');
