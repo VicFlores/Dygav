@@ -4,8 +4,9 @@ import { Session } from 'next-auth';
 
 import { axiosConfig } from '@/utils';
 import axios from 'axios';
-import { AccomodationCarousel } from '../Dashboard/AccomodationCarousel';
+
 import useDictionary from '@/app/hooks/useDictionary';
+import { AccomodationCarousel } from '@/app/components/Owners/Calendar/AccomodationCarousel';
 
 export const CalendarOwner: FC<{ session: Session }> = ({ session }) => {
   const [data, setData] = useState<any[]>();
