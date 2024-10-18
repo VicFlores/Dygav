@@ -14,7 +14,7 @@ export default NextAuth({
         password: { label: 'Password', type: 'password' },
       },
 
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         await connectDB();
 
         let userFound = await User.findOne({
